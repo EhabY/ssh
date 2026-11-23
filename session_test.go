@@ -707,7 +707,7 @@ func TestSessionKeepAlive(t *testing.T) {
 					Handler: func(s Session) {
 						keepAlive := s.Context().KeepAlive()
 						if perConnection {
-							keepAlive.SetClientAlive(interval, 1)
+							keepAlive.SetClientAlive(interval, 2)
 						}
 						keepAlives <- keepAlive
 					},
